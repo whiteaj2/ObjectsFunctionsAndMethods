@@ -5,57 +5,58 @@ This module uses ROSEGRAPHICS to demonstrate:
   -- accessing their DATA via INSTANCE VARIABLES.
 
 Authors: David Mutchler, Dave Fisher, Valerie Galluzzi, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and Andrew White.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 ########################################################################
 #
-# TODO: 2.
+# DONE: 2.
 #   RUN this program.  Then answer the following,
 #     GETTING HELP AS NEED! (Ask questions!!!)
 #
 #     a. For the RoseGraphics coordinate system:
 #
 #        -- Where is the (0, 0) point on the screen?
-#              WRITE_YOUR_ANSWER_HERE,_REPLACING_THIS
+#              The point (0,0) is located at the top-left of a rose window
 #
 #        -- In what direction on the screen does the positive X-axis point?
-#              WRITE_YOUR_ANSWER_HERE,_REPLACING_THIS
+#              The positive x-axis points to the right of the screen
 #
 #        -- In what direction on the screen does the positive Y-axis point?
-#              WRITE_YOUR_ANSWER_HERE,_REPLACING_THIS
+#              THe positive y-axis points to the bottom of the screen
 #
 #     b. Write a line of code that constructs a RoseGraphics object:
-#            WRITE_YOUR_ANSWER_HERE,_REPLACING_THIS
+#            import rosegraphics as rg
 #
 #     c. What is the default height of a RoseWindow?
 #        (Use the HOVER trick to determine the answer to this question.)
-#            WRITE_YOUR_ANSWER_HERE,_REPLACING_THIS
+#            The default height of a RoseWindow is 300px
 #
 #     d. Write a line of code that construct a RoseWindow object
 #        whose height is 100:  (Use the HOVER trick to figure it out)
-#            WRITE_YOUR_ANSWER_HERE,_REPLACING_THIS
+#            window = rg.RoseWindow(400,100,'')
 #
 #     e. Use the DOT trick to answer the following:
 #
 #          -- Write the names of two types of graphics objects that
 #             you can construct OTHER than Circle and Point:
-#                WRITE_YOUR_ANSWER_HERE,_REPLACING_THIS
+#                You can additionally construct a line and an ellipse
 #
 #          -- Write the names of three METHODs that Circle objects have:
-#                WRITE_YOUR_ANSWER_HERE,_REPLACING_THIS
+#                move_by() , move_center_to(), and attach_to()
 #
 #          -- Write the names of three INSTANCE VARIABLEs that Circle
 #             objects have:
-#                WRITE_YOUR_ANSWER_HERE,_REPLACING_THIS
+#                circle objects have radius, a center, and a fill_color
 #
 #     f. What does a RoseWindow RENDER method do?
-#            WRITE_YOUR_ANSWER_HERE,_REPLACING_THIS
+#            The render methods updates and then draws all of the shapes attached to a RoseWindow
+#            and then it pauses for a given number of seconds
 #
 #     g. When is a RoseWindow close_on_mouse_click method call
 #        necessary?  Why?
-#            WRITE_YOUR_ANSWER_HERE,_REPLACING_THIS
-#
+#           A close_on_mouse_click call is necessary after the window renders because the window displays on the
+#         screen after it renders and and a close_on_mouse_click is necessary to close it.
 #   ASK QUESTIONS ** NOW ** if you do not understand how the
 #     RoseGraphics graphics system works.
 #
@@ -75,6 +76,7 @@ def main():
       -- applying METHODS to them, and
       -- accessing their DATA via INSTANCE VARIABLES
     """
+    circ = rg.Circle()
     example1()
     example2()
     example3()
@@ -83,6 +85,7 @@ def main():
 def example1():
     """ Displays an empty window. """
     window = rg.RoseWindow(500, 300, 'Example 1: An empty window')
+    window.render()
     window.close_on_mouse_click()
 
 

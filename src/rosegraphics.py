@@ -146,9 +146,9 @@ class RoseWindow(object):
       widgets: the things attached to this window
     """
 
-    def __init__(self, width=400, height=300, title='Rose Graphics',
-                 color='black', canvas_color=None,
-                 make_initial_canvas=True):
+    def __init__(self, width: object = 400, height: object = 300, title: object = 'Rose Graphics',
+                 color: object = 'black', canvas_color: object = None,
+                 make_initial_canvas: object = True) -> object:
         """
 
         Pops up a   tkinter.Toplevel   window with (by default)
@@ -245,7 +245,7 @@ class RoseWindow(object):
         global _master_Tk
         _master_Tk.update()
 
-    def render(self, seconds_to_pause=None):
+    def render(self, seconds_to_pause: object = None) -> object:
         """
         Updates all the Shapes attached to RoseCanvas objects associated with this RoseWindow, then draws all those Shapes.
         After doing so, pauses the given number of seconds.
@@ -959,7 +959,7 @@ class Circle(_ShapeWithCenter, _ShapeWithOutline):
        circle.center = rg.Point(x - 50, y + 60)
     """
 
-    def __init__(self, center, radius):
+    def __init__(self, center: object, radius: object) -> object:
         """
           :type  center:  rg.Point
           :type  radius:  int
@@ -1168,7 +1168,7 @@ class Line(_Shape, _ShapeWithThickness):
        line.move_by(-50, 60)
     """
 
-    def __init__(self, start, end):
+    def __init__(self, start: object, end: object) -> object:
         """
           :type  start:  rg.Point
           :type  end:    rg.Point
@@ -1427,7 +1427,7 @@ class Rectangle(_RectangularShape, _ShapeWithOutline):
        w = rect.get_width()
     """
 
-    def __init__(self, corner_1, corner_2):
+    def __init__(self, corner_1: object, corner_2: object) -> object:
         """
          :type  corner_1:  rg.Point
          :type  corner_2:  rg.Point
