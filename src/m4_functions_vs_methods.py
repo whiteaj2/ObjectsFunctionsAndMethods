@@ -176,7 +176,7 @@ def try_methods():
     """
     newTurtle = rg.SimpleTurtle()
     newTurtle.pen = rg.Pen('brown',5)
-    newTurtle.forward(100)
+    newTurtle.forward(150)
     newTurtle.left(90)
     newTurtle.forward(50)
     newTurtle.backward(100)

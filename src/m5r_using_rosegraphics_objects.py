@@ -47,7 +47,7 @@ Authors: David Mutchler, Dave Fisher, Valerie Galluzzi, Amanda Stouder,
 #
 #          -- Write the names of three INSTANCE VARIABLEs that Circle
 #             objects have:
-#                circle objects have radius, a center, and a fill_color
+#                circle objects have an outline thickness, a center, and a fill_color
 #
 #     f. What does a RoseWindow RENDER method do?
 #            The render methods updates and then draws all of the shapes attached to a RoseWindow
@@ -56,7 +56,8 @@ Authors: David Mutchler, Dave Fisher, Valerie Galluzzi, Amanda Stouder,
 #     g. When is a RoseWindow close_on_mouse_click method call
 #        necessary?  Why?
 #           A close_on_mouse_click call is necessary after the window renders because the window displays on the
-#         screen after it renders and and a close_on_mouse_click is necessary to close it.
+#         screen after it renders and and a close_on_mouse_click is necessary to close it if need be.
+#
 #   ASK QUESTIONS ** NOW ** if you do not understand how the
 #     RoseGraphics graphics system works.
 #
